@@ -17,14 +17,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItem" id="xxt-gt-L9z">
-                                <rect key="frame" x="0.0" y="44.5" width="375" height="65.5"/>
+                                <rect key="frame" x="0.0" y="44.5" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xxt-gt-L9z" id="xIM-BC-8rw">
-                                    <rect key="frame" x="0.0" y="0.0" width="338.5" height="65.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="338.5" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57I-LY-eGk">
-                                            <rect key="frame" x="24" y="22" width="290.5" height="21.5"/>
+                                            <rect key="frame" x="24" y="22" width="290.5" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -59,7 +59,7 @@
         <!--Add Item-->
         <scene sceneID="qEt-XS-7dh">
             <objects>
-                <tableViewController id="mcz-lk-Hj7" sceneMemberID="viewController">
+                <tableViewController id="mcz-lk-Hj7" customClass="AddItemViewController" customModule="ToDoOrNotToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="QzU-qS-zdb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,8 +80,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Item" id="A7Y-NH-aiv">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fzk-Ye-PeT"/>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="hHb-9J-3iF"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fzk-Ye-PeT">
+                            <connections>
+                                <action selector="cancel:" destination="mcz-lk-Hj7" id="q3U-OU-qVp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="hHb-9J-3iF">
+                            <connections>
+                                <action selector="done:" destination="mcz-lk-Hj7" id="1CE-0P-1iJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OCE-e1-t8J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
