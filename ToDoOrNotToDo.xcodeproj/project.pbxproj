@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5AC11F328643FA5000A4C5F /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC11F228643FA5000A4C5F /* AddItemViewController.swift */; };
 		E5B9E951286255BB007F837D /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9E950286255BB007F837D /* ChecklistItem.swift */; };
 		E5C693BF2860FEF9000737D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C693BE2860FEF9000737D6 /* AppDelegate.swift */; };
 		E5C693C12860FEF9000737D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C693C02860FEF9000737D6 /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E5AC11F228643FA5000A4C5F /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		E5B9E950286255BB007F837D /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		E5C693BB2860FEF9000737D6 /* ToDoOrNotToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoOrNotToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C693BE2860FEF9000737D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				E5C693BE2860FEF9000737D6 /* AppDelegate.swift */,
 				E5C693C02860FEF9000737D6 /* SceneDelegate.swift */,
 				E5C693C22860FEF9000737D6 /* ChecklistViewController.swift */,
+				E5AC11F228643FA5000A4C5F /* AddItemViewController.swift */,
 				E5C693C42860FEF9000737D6 /* Main.storyboard */,
 				E5C693C72860FEFB000737D6 /* Assets.xcassets */,
 				E5C693C92860FEFB000737D6 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5AC11F328643FA5000A4C5F /* AddItemViewController.swift in Sources */,
 				E5C693C32860FEF9000737D6 /* ChecklistViewController.swift in Sources */,
 				E5C693BF2860FEF9000737D6 /* AppDelegate.swift in Sources */,
 				E5C693C12860FEF9000737D6 /* SceneDelegate.swift in Sources */,
