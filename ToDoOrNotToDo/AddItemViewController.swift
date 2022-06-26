@@ -17,22 +17,23 @@ protocol AddItemViewControllerDelegate: AnyObject {
 }
 
 class AddItemViewController: UITableViewController, UITextFieldDelegate {
-    @IBOutlet var textField: UITextField!
-    @IBOutlet var doneBarButton: UIBarButtonItem!
+    @IBOutlet  var textField: UITextField!
+    @IBOutlet  var doneBarButton: UIBarButtonItem!
     
     weak var delegate: AddItemViewControllerDelegate?
 
-    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        navigationItem.largeTitleDisplayMode = .never
+      super.viewDidLoad()
+      navigationItem.largeTitleDisplayMode = .never
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
       textField.becomeFirstResponder()
     }
+    
+    // MARK: - Actions
+    
     @IBAction func cancel() {
         delegate?.addItemViewControllerDidCancel(self)
     }
@@ -52,19 +53,22 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     }
     
     // MARK: - Text Field Delegates
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let oldText = textField.text!
-          let stringRange = Range(range, in: oldText)!
-          let newText = oldText.replacingCharacters(
-            in: stringRange,
-            with: string)
-          if newText.isEmpty {
-            doneBarButton.isEnabled = false
-          } else {
-            doneBarButton.isEnabled = true
-          }
-        // doneBarButtonisEnabled = !newText.isEmpty
-          return true
+    func textField(
+      _ textField: UITextField,
+      shouldChangeCharactersIn range: NSRange,
+      replacementString string: String
+    ) -> Bool {
+      let oldText = textField.text!
+      let stringRange = Range(range, in: oldText)!
+      let newText = oldText.replacingCharacters(
+        in: stringRange,
+        with: string)
+      if newText.isEmpty {
+        doneBarButton.isEnabled = false
+      } else {
+        doneBarButton.isEnabled = true
+      }
+      return true
     }
 
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
@@ -72,3 +76,4 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
       return true
     }
 }
+// doneBarButtonisEnabled = !newText.isEmpty

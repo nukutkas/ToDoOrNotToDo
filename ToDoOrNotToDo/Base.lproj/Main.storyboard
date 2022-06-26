@@ -103,17 +103,17 @@
                     <navigationItem key="navigationItem" title="Add Item" id="A7Y-NH-aiv">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fzk-Ye-PeT">
                             <connections>
-                                <action selector="cancel:" destination="mcz-lk-Hj7" id="q3U-OU-qVp"/>
+                                <action selector="cancel" destination="mcz-lk-Hj7" id="1t6-xj-whQ"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="done" id="hHb-9J-3iF">
                             <connections>
-                                <action selector="done:" destination="mcz-lk-Hj7" id="1CE-0P-1iJ"/>
+                                <action selector="done" destination="mcz-lk-Hj7" id="4Zb-y6-Gfu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="doneBarButton" destination="hHb-9J-3iF" id="IeE-pz-NWo"/>
+                        <outlet property="doneBarButton" destination="hHb-9J-3iF" id="KLJ-tc-fWe"/>
                         <outlet property="textField" destination="xxs-jF-uiN" id="4xx-x5-q6O"/>
                     </connections>
                 </tableViewController>
