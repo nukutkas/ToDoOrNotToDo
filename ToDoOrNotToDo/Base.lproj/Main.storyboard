@@ -59,7 +59,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
-                                                        <action selector="done" destination="574-bM-rt7" eventType="editingDidEndOnExit" id="j4V-2X-TCX"/>
+                                                        <action selector="done" destination="574-bM-rt7" eventType="editingDidEndOnExit" id="bbY-wg-5Fb"/>
                                                         <outlet property="delegate" destination="574-bM-rt7" id="7qg-0f-wsh"/>
                                                     </connections>
                                                 </textField>
@@ -88,13 +88,13 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Done" id="tf4-Qe-zvq">
                             <connections>
-                                <action selector="done" destination="574-bM-rt7" id="xHr-v8-jWL"/>
+                                <action selector="done" destination="574-bM-rt7" id="ySw-e2-kvX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="doneBarButton" destination="tf4-Qe-zvq" id="Yip-XW-Apl"/>
-                        <outlet property="textField" destination="G98-8K-r8g" id="LvB-Q2-CVn"/>
+                        <outlet property="doneBarButton" destination="tf4-Qe-zvq" id="FT8-M5-u0d"/>
+                        <outlet property="textField" destination="1bF-Q6-kKo" id="PwS-p9-OBv"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q5s-Kw-uVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -111,20 +111,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" id="xxt-gt-L9z">
-                                <rect key="frame" x="0.0" y="44.5" width="375" height="71"/>
+                                <rect key="frame" x="0.0" y="44.5" width="375" height="71.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xxt-gt-L9z" id="xIM-BC-8rw">
-                                    <rect key="frame" x="0.0" y="0.0" width="322" height="71"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="322" height="71.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57I-LY-eGk">
-                                            <rect key="frame" x="72" y="22" width="226" height="27"/>
+                                            <rect key="frame" x="72" y="22" width="226" height="27.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzR-SW-F6I">
-                                            <rect key="frame" x="32" y="22" width="32" height="27"/>
+                                            <rect key="frame" x="32" y="22" width="32" height="27.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="Lo1-bC-qfb"/>
                                             </constraints>
