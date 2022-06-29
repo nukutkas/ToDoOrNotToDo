@@ -29,4 +29,34 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
   weak var delegate: ListDetailViewControllerDelegate?
 
   var checklistToEdit: Checklist?
+    
+    override func viewDidLoad() {
+      super.viewDidLoad()
+
+      if let checklist = checklistToEdit {
+        title = "Edit Checklist"
+        textField.text = checklist.name
+        doneBarButton.isEnabled = true
+      }
+    }
+    
+    // MARK: - Actions
+    @IBAction func cancel() {
+      delegate?.listDetailViewControllerDidCancel(self)
+    }
+
+    @IBAction func done() {
+      if let checklist = checklistToEdit {
+        checklist.name = textField.text!
+        delegate?.listDetailViewController(
+          self,
+          didFinishEditing: checklist)
+      } else {
+        let checklist = Checklist(name: textField.text!)
+        delegate?.listDetailViewController(
+          self,
+          didFinishAdding: checklist)
+      }
+    }
+
 }
