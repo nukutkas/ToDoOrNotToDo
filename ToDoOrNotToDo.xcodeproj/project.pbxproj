@@ -16,6 +16,7 @@
 		E5C693C82860FEFB000737D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5C693C72860FEFB000737D6 /* Assets.xcassets */; };
 		E5C693CB2860FEFB000737D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C693C92860FEFB000737D6 /* LaunchScreen.storyboard */; };
 		E5CC09E1286C24CF004EDC98 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CC09E0286C24CF004EDC98 /* Checklist.swift */; };
+		E5CC09E3286C2FB9004EDC98 /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CC09E2286C2FB9004EDC98 /* ListDetailViewController.swift */; };
 		E5D241612869A5B600A012D9 /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D241602869A5B600A012D9 /* AllListsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		E5C693CA2860FEFB000737D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5C693CC2860FEFB000737D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5CC09E0286C24CF004EDC98 /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
+		E5CC09E2286C2FB9004EDC98 /* ListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
 		E5D241602869A5B600A012D9 /* AllListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +76,7 @@
 				E5C693CC2860FEFB000737D6 /* Info.plist */,
 				E5B9E950286255BB007F837D /* ChecklistItem.swift */,
 				E5D241602869A5B600A012D9 /* AllListsViewController.swift */,
+				E5CC09E2286C2FB9004EDC98 /* ListDetailViewController.swift */,
 				E5CC09E0286C24CF004EDC98 /* Checklist.swift */,
 			);
 			path = ToDoOrNotToDo;
@@ -157,6 +160,7 @@
 				E5C693C12860FEF9000737D6 /* SceneDelegate.swift in Sources */,
 				E5B9E951286255BB007F837D /* ChecklistItem.swift in Sources */,
 				E5CC09E1286C24CF004EDC98 /* Checklist.swift in Sources */,
+				E5CC09E3286C2FB9004EDC98 /* ListDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
