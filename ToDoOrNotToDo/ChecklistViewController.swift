@@ -11,11 +11,15 @@ class ChecklistViewController: UITableViewController, itemDetailViewControllerDe
     
     var items = [ChecklistItem]()
     
+    var checklist: Checklist!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
         
         loadChecklistItems()
+        
+        title = checklist.name
     }
     
     // MARK: - Navigation
