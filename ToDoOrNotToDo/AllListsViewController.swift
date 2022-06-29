@@ -62,6 +62,18 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         performSegue(withIdentifier: "ShowChecklist", sender: checklist)
     }
     
+    override func tableView(
+      _ tableView: UITableView,
+      commit editingStyle: UITableViewCell.EditingStyle,
+      forRowAt indexPath: IndexPath
+    ) {
+      lists.remove(at: indexPath.row)
+
+      let indexPaths = [indexPath]
+      tableView.deleteRows(at: indexPaths, with: .automatic)
+    }
+
+    
     // MARK: - Navigation
     override func prepare(
       for segue: UIStoryboardSegue,
