@@ -52,6 +52,12 @@ class DataModel {
                 print("Error decoding list array: \(error.localizedDescription)")
             }
         }
+        
+        func registerDefaults() {
+          let dictionary = [ "ChecklistIndex": -1 ]
+          UserDefaults.standard.register(defaults: dictionary)
+        }
+
     }
     
     
