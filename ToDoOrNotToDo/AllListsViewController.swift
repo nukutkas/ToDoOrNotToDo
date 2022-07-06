@@ -24,6 +24,21 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         // print("Data file path is \(dataFilePath())")
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+      super.viewDidAppear(animated)
+
+      navigationController?.delegate = self
+
+      let index = UserDefaults.standard.integer(
+        forKey: "ChecklistIndex")
+      if index != -1 {
+        let checklist = dataModel.lists[index]
+        performSegue(
+          withIdentifier: "ShowChecklist",
+          sender: checklist)
+      }
+    }
+    
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
