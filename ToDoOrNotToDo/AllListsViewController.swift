@@ -25,19 +25,20 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     }
     
     override func viewDidAppear(_ animated: Bool) {
-      super.viewDidAppear(animated)
-
-      navigationController?.delegate = self
-
-      let index = UserDefaults.standard.integer(
-        forKey: "ChecklistIndex")
-      if index != -1 {
-        let checklist = dataModel.lists[index]
-        performSegue(
-          withIdentifier: "ShowChecklist",
-          sender: checklist)
-      }
+        super.viewDidAppear(animated)
+        
+        navigationController?.delegate = self
+        
+        let index = dataModel.indexOfSelectedChecklist
+        
+        if  index >= 0 && index < dataModel.lists.count {
+            let checklist = dataModel.lists[index]
+            performSegue(
+                withIdentifier: "ShowChecklist",
+                sender: checklist)
+        }
     }
+    
     
     // MARK: - Table view data source
     
@@ -63,9 +64,7 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
     ) {
-        UserDefaults.standard.set(
-            indexPath.row,
-            forKey: "ChecklistIndex")
+        dataModel.indexOfSelectedChecklist = indexPath.row
         let checklist = dataModel.lists[indexPath.row]
         performSegue(withIdentifier: "ShowChecklist", sender: checklist)
     }
@@ -148,14 +147,14 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     
     // MARK: - Navigation Controller Delegates
     func navigationController(
-      _ navigationController: UINavigationController,
-      willShow viewController: UIViewController,
-      animated: Bool
+        _ navigationController: UINavigationController,
+        willShow viewController: UIViewController,
+        animated: Bool
     ) {
-      // Was the back button tapped?
-      if viewController === self {
-        UserDefaults.standard.set(-1, forKey: "ChecklistIndex")
-      }
+        // Was the back button tapped?
+        if viewController === self {
+            dataModel.indexOfSelectedChecklist = -1
+        }
     }
-
+    
 }
