@@ -18,10 +18,15 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+
         
         // print("Documents folder is \(documentsDirectory())")
         // print("Data file path is \(dataFilePath())")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      tableView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,11 +56,20 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(
-            withIdentifier: cellIdentifier, for: indexPath)
+        let cell: UITableViewCell!
+        if let tmp = tableView.dequeueReusableCell(
+          withIdentifier: cellIdentifier) {
+          cell = tmp
+        } else {
+          cell = UITableViewCell(
+            style: .subtitle,
+            reuseIdentifier: cellIdentifier)
+        }
         let checklist = dataModel.lists[indexPath.row]
         cell.textLabel!.text = checklist.name
         cell.accessoryType = .detailDisclosureButton
+        cell.detailTextLabel!.text = "\(checklist.countUncheckedItems()) Remaining"
+
         return cell
     }
     
