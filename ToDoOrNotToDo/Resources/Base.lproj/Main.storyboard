@@ -106,6 +106,9 @@
                                                 <constraint firstAttribute="bottom" secondItem="wdm-UO-51L" secondAttribute="bottom" constant="3.5" id="u9y-iK-a5t"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="xMa-Vh-Xnm" kind="show" identifier="PickIcon" id="d4C-1h-Fjl"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -129,6 +132,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="doneBarButton" destination="tf4-Qe-zvq" id="FT8-M5-u0d"/>
+                        <outlet property="iconImage" destination="wdm-UO-51L" id="Q88-hm-g3E"/>
                         <outlet property="textField" destination="1bF-Q6-kKo" id="PwS-p9-OBv"/>
                     </connections>
                 </tableViewController>
@@ -136,7 +140,7 @@
             </objects>
             <point key="canvasLocation" x="-223.19999999999999" y="948.57571214392806"/>
         </scene>
-        <!--Icon Picker View Controller-->
+        <!--Choose Icon-->
         <scene sceneID="ZQN-la-kS2">
             <objects>
                 <tableViewController id="xMa-Vh-Xnm" customClass="IconPickerViewController" customModule="ToDoOrNotToDo" customModuleProvider="target" sceneMemberID="viewController">
@@ -168,6 +172,7 @@
                             <outlet property="delegate" destination="xMa-Vh-Xnm" id="dJf-VV-55z"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Choose Icon" id="Rjo-vQ-7Kb"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q6i-et-aHH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
