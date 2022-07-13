@@ -8,6 +8,10 @@
 import Foundation
 
 class ChecklistItem: NSObject, Codable {
-  var text = ""
-  var checked = false
+    var text = ""
+    var checked = false
+    var dueDate = Date()
+    var shouldRemind = false
+    var itemID = -1
+    
 }
