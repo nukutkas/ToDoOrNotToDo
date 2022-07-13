@@ -103,5 +103,4 @@ class DataModel {
       userDefaults.set(itemID + 1, forKey: "ChecklistItemID")
       return itemID
     }
-
 }
