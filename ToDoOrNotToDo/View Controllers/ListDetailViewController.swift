@@ -31,6 +31,8 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
     
     var checklistToEdit: Checklist?
     
+    var iconName = "Folder"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,7 +40,9 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
             title = "Edit Checklist"
             textField.text = checklist.name
             doneBarButton.isEnabled = true
+            iconName = checklist.iconName
         }
+        iconImage.image = UIImage(named: iconName)
     }
     
     // MARK: - Actions
