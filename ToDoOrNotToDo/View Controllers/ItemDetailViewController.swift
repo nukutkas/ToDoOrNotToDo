@@ -34,10 +34,13 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
         
-        if let itemToEdit = itemToEdit {
+        if let item = itemToEdit {
             title = "Edit Item"
-            textField.text = itemToEdit.text
+            textField.text = item.text
             doneBarButton.isEnabled = true
+            
+            shouldRemindSwitch.isOn = item.shouldRemind
+            datePicker.date = item.dueDate
         }
     }
     
@@ -54,12 +57,16 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     @IBAction func done() {
         if let item = itemToEdit {
             item.text = textField.text!
+            item.shouldRemind = shouldRemindSwitch.isOn
+            item.dueDate = datePicker.date
             delegate?.itemDetailViewController(
                 self,
                 didFinishEditing: item)
         } else {
             let item = ChecklistItem()
             item.text = textField.text!
+            item.shouldRemind = shouldRemindSwitch.isOn
+            item.dueDate = datePicker.date
             delegate?.itemDetailViewController(self, didFinishAdding: item)
         }
     }
